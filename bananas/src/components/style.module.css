@@ -1,0 +1,61 @@
+.txStatus {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.txStatus[data-status="proving"] {
+  color: lightgreen;
+}
+
+.txStatus[data-status="pending"] {
+  color: blue;
+}
+
+.txStatus[data-status="mined"] {
+  color: green;
+}
+
+.txStatus[data-status="dropped"] {
+  color: red;
+}
+
+.field {
+  margin: 1rem 0;
+  min-width: 320px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+}
+
+.transferForm {
+  margin-top: 2rem;
+}
+
+
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinnerWrapper {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #000;
+  animation: spinner .6s linear infinite;
+}

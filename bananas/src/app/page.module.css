@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 8rem;
+  margin-bottom: 2rem;
+}
+
+.bnc {
+  margin: 0.25rem 0 3rem;
+}

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AztecWallet",
+  "version": "0.0.1",
+  "description": "Manages your Aztec contract",
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self' http: data:"
+  },
+  "action": {
+    "default_title": "Wallet"
+  },
+  "permissions": ["tabs", "activeTab", "contextMenus"],
+  "background": {
+    "scripts": ["out/background.js"],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["out/content_script.js"]
+    }
+  ]
+}
